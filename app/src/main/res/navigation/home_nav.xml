@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/trainingAFragment">
+
+    <fragment
+        android:id="@+id/trainingAFragment"
+        android:name="com.samirmaciel.bodybuildingweightregister.view.home.trainingTabs.TrainingAFragment"
+        android:label="fragment_training_a"
+        tools:layout="@layout/fragment_training_a" >
+        <action
+            android:id="@+id/action_trainingAFragment_to_trainingBFragment"
+            app:destination="@id/trainingBFragment" />
+        <action
+            android:id="@+id/action_trainingAFragment_to_trainingCFragment"
+            app:destination="@id/trainingCFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingBFragment"
+        android:name="com.samirmaciel.bodybuildingweightregister.view.home.trainingTabs.TrainingBFragment"
+        android:label="fragment_training_b"
+        tools:layout="@layout/fragment_training_b" >
+        <action
+            android:id="@+id/action_trainingBFragment_to_trainingCFragment"
+            app:destination="@id/trainingCFragment" />
+        <action
+            android:id="@+id/action_trainingBFragment_to_trainingAFragment"
+            app:destination="@id/trainingAFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingCFragment"
+        android:name="com.samirmaciel.bodybuildingweightregister.view.home.trainingTabs.TrainingCFragment"
+        android:label="fragment_training_c"
+        tools:layout="@layout/fragment_training_c" >
+        <action
+            android:id="@+id/action_trainingCFragment_to_trainingAFragment"
+            app:destination="@id/trainingAFragment" />
+        <action
+            android:id="@+id/action_trainingCFragment_to_trainingBFragment"
+            app:destination="@id/trainingBFragment" />
+    </fragment>
+</navigation>

@@ -11,9 +11,13 @@
         android:label="fragment_training_a"
         tools:layout="@layout/fragment_training_a" >
         <action
+            app:enterAnim="@anim/get_from_right"
+            app:exitAnim="@anim/push_to_left"
             android:id="@+id/action_trainingAFragment_to_trainingBFragment"
             app:destination="@id/trainingBFragment" />
         <action
+            app:enterAnim="@anim/get_from_right"
+            app:exitAnim="@anim/push_to_left"
             android:id="@+id/action_trainingAFragment_to_trainingCFragment"
             app:destination="@id/trainingCFragment" />
     </fragment>
@@ -23,9 +27,13 @@
         android:label="fragment_training_b"
         tools:layout="@layout/fragment_training_b" >
         <action
+            app:enterAnim="@anim/get_from_right"
+            app:exitAnim="@anim/push_to_left"
             android:id="@+id/action_trainingBFragment_to_trainingCFragment"
             app:destination="@id/trainingCFragment" />
         <action
+            app:enterAnim="@anim/get_from_left"
+            app:exitAnim="@anim/push_to_right"
             android:id="@+id/action_trainingBFragment_to_trainingAFragment"
             app:destination="@id/trainingAFragment" />
     </fragment>
@@ -35,9 +43,13 @@
         android:label="fragment_training_c"
         tools:layout="@layout/fragment_training_c" >
         <action
+            app:exitAnim="@anim/push_to_right"
+            app:enterAnim="@anim/get_from_left"
             android:id="@+id/action_trainingCFragment_to_trainingAFragment"
             app:destination="@id/trainingAFragment" />
         <action
+            app:exitAnim="@anim/push_to_right"
+            app:enterAnim="@anim/get_from_left"
             android:id="@+id/action_trainingCFragment_to_trainingBFragment"
             app:destination="@id/trainingBFragment" />
     </fragment>

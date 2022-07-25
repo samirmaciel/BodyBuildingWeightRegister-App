@@ -44,7 +44,7 @@ class TrainingCFragment : Fragment() {
     private fun initRecyclerView(){
         recyclerAdapter = EquipamentModelsRecyclerAdapter(childFragmentManager, {updateEquipament ->
             viewModel.insertEquipamentModel(updateEquipament)
-        },{})
+        },{deletedEquipament -> viewModel.deleteEquipamentModel(deletedEquipament)})
         binding.rvTrainingC.adapter = recyclerAdapter
     }
 
